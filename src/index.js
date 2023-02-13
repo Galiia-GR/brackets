@@ -21,7 +21,7 @@ module.exports = function check(str, bracketsConfig) {
 
       let highSymbol = stack[stack.length - 1];
 
-      if (newClose != highSymbol) {
+      if (newClose[symbol] != highSymbol) {
         stack.pop();
       } else {
         return false;
